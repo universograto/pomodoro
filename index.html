@@ -1412,6 +1412,504 @@
       }
     }
 
+
+    /* Minimal version */
+    :root {
+      --bg: #f7f8fa;
+      --soft: #f3f5f7;
+      --border: #edf0f3;
+      --shadow: 0 18px 44px rgba(16, 24, 39, 0.08);
+      --soft-shadow: 0 8px 24px rgba(16, 24, 39, 0.05);
+    }
+
+    body {
+      background: var(--bg);
+      font-weight: 400;
+    }
+
+    .topbar {
+      height: 58px;
+      padding: 0 6vw;
+      box-shadow: none;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand {
+      gap: 10px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .brand-mark {
+      width: 48px;
+      height: 34px;
+      border-radius: 10px;
+      padding: 7px;
+    }
+
+    .brand small {
+      font-weight: 600;
+      letter-spacing: 0.08em;
+    }
+
+    .nav {
+      gap: 18px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      font-size: 0.68rem;
+    }
+
+    .hero {
+      min-height: auto;
+      padding: 46px 6vw 38px;
+      color: var(--tg-navy);
+      background: var(--bg);
+      overflow: visible;
+    }
+
+    .hero::before,
+    .hero::after,
+    .hero-card {
+      display: none;
+    }
+
+    .hero-content {
+      width: min(760px, 100%);
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .pill {
+      padding: 8px 13px;
+      background: rgba(168, 201, 31, 0.12);
+      color: #71850e;
+      box-shadow: none;
+      font-size: 0.66rem;
+      letter-spacing: 0.08em;
+    }
+
+    .hero h1 {
+      margin: 18px 0 10px;
+      color: var(--tg-navy);
+      font-size: clamp(2.5rem, 7vw, 5.2rem);
+      line-height: 0.92;
+      letter-spacing: -0.08em;
+    }
+
+    .hero h1 span {
+      color: var(--tg-green);
+    }
+
+    .hero p {
+      margin: 0 auto;
+      max-width: 540px;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.6;
+      font-weight: 500;
+    }
+
+    .hero-actions {
+      justify-content: center;
+      margin-top: 22px;
+    }
+
+    .btn {
+      padding: 12px 17px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      font-size: 0.72rem;
+      box-shadow: none !important;
+    }
+
+    .section {
+      padding: 44px 6vw;
+    }
+
+    .section.white {
+      background: var(--bg);
+    }
+
+    .section-title {
+      margin-bottom: 24px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(1.55rem, 3vw, 2.35rem);
+      line-height: 1.02;
+      letter-spacing: -0.05em;
+      text-transform: none;
+    }
+
+    .section-title p {
+      max-width: 520px;
+      font-size: 0.94rem;
+      line-height: 1.6;
+      font-weight: 500;
+    }
+
+    .app-grid {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+      grid-template-columns: minmax(380px, 520px) minmax(340px, 1fr);
+      gap: 22px;
+    }
+
+    .panel {
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      overflow: visible;
+    }
+
+    .timer-panel {
+      border-color: var(--border);
+      box-shadow: 0 18px 44px rgba(16, 24, 39, 0.10);
+    }
+
+    .panel-head {
+      padding: 18px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .panel-title {
+      font-size: 0.88rem;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      text-transform: none;
+    }
+
+    .mode-badge {
+      padding: 7px 10px;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .timer-body {
+      padding: 30px 22px 20px;
+      background: var(--white);
+    }
+
+    .clock {
+      width: min(300px, 72vw);
+      height: min(300px, 72vw);
+      box-shadow: inset 0 0 0 16px #ffffff, 0 12px 32px rgba(16, 24, 39, 0.08);
+    }
+
+    .clock-inner {
+      background: var(--tg-navy);
+    }
+
+    .time {
+      font-size: clamp(3.4rem, 9vw, 4.8rem);
+      letter-spacing: -0.08em;
+    }
+
+    .current-task {
+      margin-top: 20px;
+      background: #f7f8fa;
+      border: 1px solid var(--border);
+      color: var(--tg-navy);
+      font-size: 0.92rem;
+      font-weight: 600;
+      min-height: 48px;
+    }
+
+    .controls {
+      padding: 0 20px 20px;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .controls #startPauseBtn {
+      min-height: 52px;
+    }
+
+    .controls .btn {
+      border-radius: 14px;
+    }
+
+    .stats {
+      padding: 0 20px 20px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .stat {
+      background: #fafbfc;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+    }
+
+    .stat strong {
+      font-size: 1.25rem;
+    }
+
+    .stat span {
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    details#ajustes {
+      padding: 0 20px 20px;
+    }
+
+    summary {
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    .settings-grid {
+      gap: 10px;
+    }
+
+    .setting {
+      border: 1px solid var(--border);
+      background: #fafbfc;
+      border-radius: 16px;
+      padding: 12px;
+    }
+
+    .setting label {
+      font-size: 0.66rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    input,
+    select {
+      border-color: var(--border);
+      font-weight: 500;
+      border-radius: 14px;
+    }
+
+    .matrix-explainer {
+      margin: 0;
+      padding: 18px 20px 0;
+      max-width: none;
+    }
+
+    .matrix-explainer summary {
+      display: inline-flex;
+      color: var(--tg-navy);
+      background: #f6f8fa;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 9px 13px;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    .matrix-explainer p {
+      margin: 12px 0 0;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 0.9rem;
+      font-weight: 400;
+      max-width: 70ch;
+    }
+
+    .task-form {
+      padding: 18px 20px 18px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .task-form input,
+    .task-form select,
+    .task-form .btn {
+      min-height: 46px;
+      border-radius: 14px;
+    }
+
+    .matrix {
+      padding: 0 20px 22px;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      background: var(--white);
+    }
+
+    .quadrant {
+      min-height: auto;
+      padding: 0;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--white);
+      overflow: hidden;
+    }
+
+    .quadrant-header {
+      margin: 0;
+      padding: 15px 16px;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .quadrant h3 {
+      font-size: 0.96rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .quadrant p {
+      display: none;
+    }
+
+    .tag {
+      background: #f6f8fa;
+      color: var(--muted) !important;
+      border: 1px solid var(--border);
+      font-size: 0.58rem;
+      font-weight: 700;
+      padding: 6px 8px;
+    }
+
+    .task-list {
+      padding: 12px;
+      gap: 9px;
+    }
+
+    .task {
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--tg-green);
+      border-radius: 14px;
+      padding: 11px 12px;
+      background: #fff;
+    }
+
+    .task.active {
+      outline: 2px solid rgba(168, 201, 31, 0.20);
+    }
+
+    .task-title {
+      font-size: 0.9rem;
+      line-height: 1.35;
+      font-weight: 600;
+    }
+
+    .task-meta {
+      margin-top: 8px;
+      gap: 6px;
+    }
+
+    .chip {
+      padding: 5px 7px;
+      font-size: 0.63rem;
+      font-weight: 500;
+      background: #f7f8fa;
+    }
+
+    .task-actions {
+      margin-top: 9px;
+      gap: 6px;
+    }
+
+    .mini-btn {
+      padding: 7px 8px;
+      border-radius: 9px;
+      font-size: 0.6rem;
+      font-weight: 700;
+    }
+
+    .empty {
+      border: 0;
+      background: #fafbfc;
+      border-radius: 14px;
+      padding: 13px;
+      font-size: 0.84rem;
+      color: #9aa3ad;
+    }
+
+    .section.green {
+      background: var(--white);
+      color: var(--tg-navy);
+      padding-top: 30px;
+      padding-bottom: 30px;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .green-layout {
+      width: min(920px, 100%);
+      margin: 0 auto;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      text-align: center;
+    }
+
+    .quote {
+      color: var(--tg-navy);
+      font-size: clamp(1.35rem, 3vw, 2rem);
+      line-height: 1.15;
+      letter-spacing: -0.04em;
+      text-transform: none;
+    }
+
+    .quote small {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 0.64rem;
+      letter-spacing: 0.10em;
+    }
+
+    .tips-card {
+      display: none;
+    }
+
+    .cta h2 {
+      font-size: clamp(1.6rem, 3vw, 2.3rem);
+      text-transform: none;
+      line-height: 1.05;
+    }
+
+    .cta p {
+      font-weight: 400;
+      font-size: 0.92rem;
+    }
+
+    .footer {
+      padding: 28px 6vw;
+      background: var(--tg-navy);
+    }
+
+    @media (max-width: 1100px) {
+      .app-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .topbar {
+        padding: 0 5vw;
+      }
+
+      .hero {
+        padding: 36px 5vw 28px;
+      }
+
+      .section {
+        padding: 36px 5vw;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.4rem, 15vw, 4.2rem);
+      }
+
+      .clock {
+        width: min(265px, 76vw);
+        height: min(265px, 76vw);
+      }
+
+      .controls,
+      .stats {
+        grid-template-columns: 1fr;
+      }
+    }
+
   </style>
 </head>
 
@@ -1463,7 +1961,7 @@
     <div class="section-title">
       <h2>No es solo tiempo,<br/>es foco con intención</h2>
       <p>
-        El cronómetro es el centro de esta experiencia: elige una actividad, entra en foco y usa la matriz solo como apoyo para decidir mejor qué merece tu tiempo.
+        Elige una actividad, entra en foco y deja que la matriz te ayude a decidir qué merece tu tiempo.
       </p>
     </div>
 
@@ -1564,9 +2062,12 @@
           <span class="mode-badge">Prioriza mejor</span>
         </div>
 
-        <p class="matrix-explainer">
-          Usa la matriz como un filtro simple: escribe la actividad y ubícala según su prioridad. Si es urgente e importante, hazla ya. Si es importante pero no urgente, prográmala. Si urge pero no necesita tu energía principal, delégala. Y si no aporta valor real, elimínala o déjala para después. La idea no es llenar la matriz, sino despejar tu día para enfocarte en lo esencial.
-        </p>
+        <details class="matrix-explainer">
+          <summary>Cómo usar la matriz</summary>
+          <p>
+            Ubica cada actividad en el lugar que le corresponde: haz ahora lo urgente e importante, agenda lo importante que puede esperar, delega lo urgente que no requiere tu energía principal y elimina lo que no aporta valor. La matriz no es para llenarla, es para despejar tu día.
+          </p>
+        </details>
 
         <form class="task-form" id="taskForm">
           <input id="taskName" type="text" placeholder="Ej: Revisar propuesta de aliados" required />
