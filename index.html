@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <title>Pomodoro Grato</title>
   <style>
     :root {
@@ -1167,6 +1170,248 @@
       }
     }
 
+
+    body {
+      font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      letter-spacing: -0.01em;
+    }
+
+    .nav {
+      font-size: 0.72rem;
+      gap: 22px;
+    }
+
+    .section-title p,
+    .hero p,
+    .matrix-explainer,
+    .quadrant p,
+    .current-task,
+    .tips-card ul,
+    .cta p,
+    .footer {
+      letter-spacing: 0;
+    }
+
+    .app-grid {
+      grid-template-columns: minmax(470px, 620px) minmax(320px, 1fr);
+      gap: 34px;
+      align-items: start;
+    }
+
+    .timer-panel {
+      box-shadow: 0 32px 74px rgba(16, 24, 39, 0.16);
+    }
+
+    .panel-head {
+      padding: 20px 24px;
+    }
+
+    .panel-title {
+      font-size: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .timer-body {
+      padding: 36px 28px 26px;
+    }
+
+    .current-task {
+      max-width: 92%;
+      font-size: 0.96rem;
+    }
+
+    .controls {
+      gap: 12px;
+    }
+
+    .controls .btn {
+      font-size: 0.76rem;
+    }
+
+    .stats {
+      gap: 12px;
+    }
+
+    .matrix-explainer {
+      margin: 0;
+      padding: 24px 24px 4px;
+      color: var(--muted);
+      line-height: 1.7;
+      font-weight: 500;
+      font-size: 0.95rem;
+      max-width: 64ch;
+    }
+
+    .task-form {
+      padding: 18px 24px 24px;
+      grid-template-columns: 1.45fr 0.46fr 0.96fr auto;
+      gap: 12px;
+      border-bottom: 0;
+    }
+
+    .task-form input,
+    .task-form select {
+      min-height: 50px;
+      border-radius: 16px;
+      border-color: #edf1f5;
+      box-shadow: none;
+    }
+
+    .task-form .btn {
+      min-height: 50px;
+      border-radius: 16px;
+    }
+
+    .matrix {
+      padding: 6px 24px 28px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(260px, 1fr));
+      gap: 22px;
+      background: var(--white);
+    }
+
+    .quadrant {
+      min-height: 255px;
+      padding: 20px;
+      border-radius: 24px;
+      background: #fbfcfd;
+      border: 1px solid #edf1f5;
+      box-shadow: none;
+    }
+
+    .quadrant.drag-over {
+      background: rgba(168, 201, 31, 0.06);
+      border-color: rgba(168, 201, 31, 0.45);
+      transform: none;
+    }
+
+    .quadrant-header {
+      margin-bottom: 16px;
+      gap: 10px;
+    }
+
+    .quadrant h3 {
+      font-size: 1rem;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      text-transform: none;
+      font-weight: 700;
+    }
+
+    .quadrant p {
+      margin-top: 5px;
+      font-size: 0.82rem;
+      line-height: 1.45;
+      color: var(--muted);
+      max-width: 24ch;
+      font-weight: 500;
+    }
+
+    .tag {
+      padding: 7px 10px;
+      font-size: 0.6rem;
+      letter-spacing: 0.08em;
+      background: #f4f7fa;
+      box-shadow: none;
+    }
+
+    .task-list {
+      gap: 14px;
+      align-content: start;
+    }
+
+    .task {
+      padding: 14px 14px 12px;
+      background: var(--white);
+      border: 1px solid #edf1f5;
+      border-left: 4px solid var(--tg-green);
+      border-top: 1px solid #edf1f5;
+      border-radius: 18px;
+      box-shadow: none;
+    }
+
+    .task-title {
+      font-size: 0.93rem;
+      line-height: 1.45;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .task-meta {
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .chip {
+      background: #f5f7fa;
+      color: var(--muted);
+      padding: 6px 9px;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0;
+    }
+
+    .task-actions {
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .mini-btn {
+      border-radius: 10px;
+      padding: 8px 10px;
+      font-size: 0.64rem;
+      letter-spacing: 0.05em;
+      box-shadow: none;
+    }
+
+    .empty {
+      padding: 18px;
+      border-radius: 18px;
+      background: #ffffff;
+      border: 1px dashed #e6ebf0;
+      color: #8892a0;
+      font-size: 0.88rem;
+      font-weight: 500;
+      line-height: 1.55;
+    }
+
+    .green-layout {
+      gap: 42px;
+    }
+
+    .tips-card {
+      transform: none;
+      box-shadow: 0 18px 42px rgba(16, 24, 39, 0.12);
+    }
+
+    .footer {
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 1100px) {
+      .app-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .matrix {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 820px) {
+      .matrix {
+        grid-template-columns: 1fr;
+      }
+
+      .task-form {
+        grid-template-columns: 1fr;
+      }
+
+      .matrix-explainer {
+        max-width: none;
+      }
+    }
+
   </style>
 </head>
 
@@ -1218,7 +1463,7 @@
     <div class="section-title">
       <h2>No es solo tiempo,<br/>es foco con intención</h2>
       <p>
-        Elige una tarea activa, inicia el temporizador y avanza pomodoro a pomodoro. Tus tareas y preferencias se guardan en este navegador.
+        El cronómetro es el centro de esta experiencia: elige una actividad, entra en foco y usa la matriz solo como apoyo para decidir mejor qué merece tu tiempo.
       </p>
     </div>
 
@@ -1320,7 +1565,7 @@
         </div>
 
         <p class="matrix-explainer">
-          La Matriz de Eisenhower te ayuda a decidir qué hacer primero sin llenar tu día de ruido: lo urgente e importante va directo a acción, lo importante pero no urgente se agenda con calma, lo urgente que no necesariamente requiere tu energía se puede delegar, y lo que no es urgente ni importante se depura para que el cronómetro esté al servicio de lo que realmente mueve tu día.
+          Usa la matriz como un filtro simple: escribe la actividad y ubícala según su prioridad. Si es urgente e importante, hazla ya. Si es importante pero no urgente, prográmala. Si urge pero no necesita tu energía principal, delégala. Y si no aporta valor real, elimínala o déjala para después. La idea no es llenar la matriz, sino despejar tu día para enfocarte en lo esencial.
         </p>
 
         <form class="task-form" id="taskForm">
